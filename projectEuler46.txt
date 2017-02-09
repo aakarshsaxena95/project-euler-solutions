@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    static int prime(int a)
+        {
+        int i;
+        for(i=2;i<a/2;i++)
+            {
+            if(a%i==0)
+                return 0;
+        }
+        return 1;
+    }
+    public static void main(String[] args) {
+      int c,i,n,ln,f;
+        
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t!=0)
+            {
+            c=0;
+            n=sc.nextInt();
+            for(i=1;;i++)
+                {
+                f=0;
+                ln=n-2*i*i;
+                 if(ln>1){
+                f=prime(ln);
+               if(f==1)
+                   c++;
+                 }
+                 else 
+                     break;
+            }
+            System.out.println(c);
+        t--;}
+        
+      
+    }
+}
