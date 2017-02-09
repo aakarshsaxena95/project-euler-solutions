@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+#include<ctype.h>
+int main() 
+{
+   long long int T,i,N,a,c=-1;
+    double b;
+    scanf("%lld",&T);
+    for(i=0;i<T;i++)
+        {
+        scanf("%lld",&N);
+        b=(-1+sqrt(1+8*N));
+        b=b/2;
+       a=b;
+        if(a<b)
+        printf("%d\n",c);
+       else
+            printf("%lld\n",a); 
+   
+    }
+    return 0;
+}
